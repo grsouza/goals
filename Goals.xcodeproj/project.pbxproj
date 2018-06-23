@@ -45,11 +45,14 @@
 		18AA8A5B1FF416A3003BE3AD /* GoalOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA8A5A1FF416A3003BE3AD /* GoalOverviewViewModel.swift */; };
 		18AA8A5D1FF419A2003BE3AD /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA8A5C1FF419A2003BE3AD /* ProgressView.swift */; };
 		18AA8A5F1FF42405003BE3AD /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA8A5E1FF42405003BE3AD /* Double.swift */; };
+		18B383A820DE7021007F34D0 /* MyGoalsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B383A720DE7021007F34D0 /* MyGoalsRouter.swift */; };
+		18B383AA20DE742E007F34D0 /* MyGoalsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B383A920DE742E007F34D0 /* MyGoalsInteractor.swift */; };
+		18B383AC20DE7492007F34D0 /* MyGoalsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B383AB20DE7492007F34D0 /* MyGoalsPresenter.swift */; };
+		18B383AE20DE77CD007F34D0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B383AD20DE77CD007F34D0 /* BaseView.swift */; };
 		18C468CD1FF2B77100C53250 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C468CC1FF2B77100C53250 /* Goal.swift */; };
 		18C468D01FF2B78F00C53250 /* RMGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C468CF1FF2B78F00C53250 /* RMGoal.swift */; };
 		18C468D21FF2B8F500C53250 /* Observable+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C468D11FF2B8F500C53250 /* Observable+Domain.swift */; };
 		18C468D51FF2BA2700C53250 /* MyGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C468D41FF2BA2700C53250 /* MyGoalsViewController.swift */; };
-		18C468D81FF2BA4A00C53250 /* MyGoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C468D71FF2BA4A00C53250 /* MyGoalsViewModel.swift */; };
 		18C468DA1FF2BC1F00C53250 /* MyGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C468D91FF2BC1F00C53250 /* MyGoals.storyboard */; };
 		18C468DC1FF2BD3E00C53250 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C468DB1FF2BD3E00C53250 /* FloatingButton.swift */; };
 		18C468DE1FF2BE6C00C53250 /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C468DD1FF2BE6C00C53250 /* AddGoalViewController.swift */; };
@@ -114,11 +117,14 @@
 		18AA8A5A1FF416A3003BE3AD /* GoalOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalOverviewViewModel.swift; sourceTree = "<group>"; };
 		18AA8A5C1FF419A2003BE3AD /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		18AA8A5E1FF42405003BE3AD /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		18B383A720DE7021007F34D0 /* MyGoalsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsRouter.swift; sourceTree = "<group>"; };
+		18B383A920DE742E007F34D0 /* MyGoalsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsInteractor.swift; sourceTree = "<group>"; };
+		18B383AB20DE7492007F34D0 /* MyGoalsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsPresenter.swift; sourceTree = "<group>"; };
+		18B383AD20DE77CD007F34D0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		18C468CC1FF2B77100C53250 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		18C468CF1FF2B78F00C53250 /* RMGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMGoal.swift; sourceTree = "<group>"; };
 		18C468D11FF2B8F500C53250 /* Observable+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Domain.swift"; sourceTree = "<group>"; };
 		18C468D41FF2BA2700C53250 /* MyGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsViewController.swift; sourceTree = "<group>"; };
-		18C468D71FF2BA4A00C53250 /* MyGoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsViewModel.swift; sourceTree = "<group>"; };
 		18C468D91FF2BC1F00C53250 /* MyGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyGoals.storyboard; sourceTree = "<group>"; };
 		18C468DB1FF2BD3E00C53250 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		18C468DD1FF2BE6C00C53250 /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 				18AA8A4D1FF3F12F003BE3AD /* Image.swift */,
 				184EEDBF1FF573FD00490DB5 /* Formatter.swift */,
 				187E0607200388E000F3F58A /* ListViewController.swift */,
+				18B383AD20DE77CD007F34D0 /* BaseView.swift */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -320,11 +327,13 @@
 		18C468D61FF2BA3D00C53250 /* MyGoals */ = {
 			isa = PBXGroup;
 			children = (
-				18C468D41FF2BA2700C53250 /* MyGoalsViewController.swift */,
-				18C468D71FF2BA4A00C53250 /* MyGoalsViewModel.swift */,
-				18C468D91FF2BC1F00C53250 /* MyGoals.storyboard */,
 				185794461FF3D0DF00522A88 /* GoalCell.swift */,
+				18C468D91FF2BC1F00C53250 /* MyGoals.storyboard */,
+				18B383A920DE742E007F34D0 /* MyGoalsInteractor.swift */,
+				18B383AB20DE7492007F34D0 /* MyGoalsPresenter.swift */,
+				18B383A720DE7021007F34D0 /* MyGoalsRouter.swift */,
 				185794481FF3D22E00522A88 /* MyGoalsSectionController.swift */,
+				18C468D41FF2BA2700C53250 /* MyGoalsViewController.swift */,
 			);
 			path = MyGoals;
 			sourceTree = "<group>";
@@ -410,7 +419,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Guilherme Souza";
 				TargetAttributes = {
 					18026EC51FF2B5D700C9C267 = {
@@ -590,8 +599,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18AA8A441FF3EA51003BE3AD /* PaymentsSectionController.swift in Sources */,
+				18B383AA20DE742E007F34D0 /* MyGoalsInteractor.swift in Sources */,
 				18026EF01FF2B5F700C9C267 /* RealmRepresentable.swift in Sources */,
 				18AA8A461FF3EAA8003BE3AD /* Payment.swift in Sources */,
+				18B383A820DE7021007F34D0 /* MyGoalsRouter.swift in Sources */,
 				18C468E71FF2C7FA00C53250 /* AddGoalViewModel.swift in Sources */,
 				18AA8A5F1FF42405003BE3AD /* Double.swift in Sources */,
 				1857944E1FF3E22600522A88 /* GoalOverviewViewController.swift in Sources */,
@@ -612,9 +623,9 @@
 				18C468E51FF2C46E00C53250 /* KeyboardObserver.swift in Sources */,
 				187E0608200388E000F3F58A /* ListViewController.swift in Sources */,
 				18026EF41FF2B60100C9C267 /* Storyboard.swift in Sources */,
+				18B383AC20DE7492007F34D0 /* MyGoalsPresenter.swift in Sources */,
 				184EEDC01FF573FD00490DB5 /* Formatter.swift in Sources */,
 				18026EEC1FF2B5EE00C9C267 /* DomainConvertibleType.swift in Sources */,
-				18C468D81FF2BA4A00C53250 /* MyGoalsViewModel.swift in Sources */,
 				18AA8A551FF3F987003BE3AD /* AddPaymentViewModel.swift in Sources */,
 				18C468D51FF2BA2700C53250 /* MyGoalsViewController.swift in Sources */,
 				18AA8A481FF3EB00003BE3AD /* RMPayment.swift in Sources */,
@@ -628,6 +639,7 @@
 				18AA8A4C1FF3ED0E003BE3AD /* PaymentService.swift in Sources */,
 				18AA8A4E1FF3F12F003BE3AD /* Image.swift in Sources */,
 				18AA8A5D1FF419A2003BE3AD /* ProgressView.swift in Sources */,
+				18B383AE20DE77CD007F34D0 /* BaseView.swift in Sources */,
 				18C468DC1FF2BD3E00C53250 /* FloatingButton.swift in Sources */,
 				18AA8A511FF3F83D003BE3AD /* AddPaymentViewController.swift in Sources */,
 			);
@@ -679,6 +691,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -686,6 +699,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -736,6 +750,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -743,6 +758,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

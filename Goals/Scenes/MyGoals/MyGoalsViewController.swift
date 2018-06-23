@@ -8,7 +8,6 @@
 
 import UIKit
 import IGListKit
-import RxSwift
 
 final class GoalDisplayable: ListDiffable {
     let uid: String
@@ -43,28 +42,22 @@ final class GoalDisplayable: ListDiffable {
     }
 }
 
+protocol MyGoalsView: BaseView {
+    func displayGoals(_ goals: [GoalDisplayable])
+}
+
 final class MyGoalsViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var addButton: FloatingButton!
 
-    private lazy var refreshControl: UIRefreshControl = {
-        let control = UIRefreshControl()
-//        control.tintColor = .white
-        control.addTarget(self, action: #selector(pullToRefresh(_:)), for: .valueChanged)
-        return control
-    }()
-
     private lazy var adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 2)
     private var items: [GoalDisplayable] = []
 
-    private let viewModel: MyGoalsViewModelType = MyGoalsViewModel()
-    private let disposeBag = DisposeBag()
-    private lazy var transition = CircularTransition()
+    var router: MyGoalsRoutingLogic!
+    var interactor: MyGoalsBusinessLogic!
 
-    static func instantiate() -> MyGoalsViewController {
-        return Storyboard.MyGoals.instantiate(MyGoalsViewController.self)
-    }
+    private lazy var transition = CircularTransition()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,40 +67,21 @@ final class MyGoalsViewController: UIViewController {
 
         let buttonMargin: CGFloat = 64
         collectionView.contentInset.bottom = buttonMargin + addButton.frame.height
-        collectionView.refreshControl = refreshControl
         adapter.collectionView = collectionView
         adapter.dataSource = self
 
-        bindViewModel()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel.input.viewDidAppear()
-    }
-
-    private func bindViewModel() {
-        viewModel.output.goals
-            .drive(onNext: { [weak self] goals in
-                self?.items = goals
-                self?.adapter.performUpdates(animated: true)
-            })
-            .disposed(by: disposeBag)
-
-        viewModel.output.isLoading
-            .drive(refreshControl.rx.isRefreshing)
-            .disposed(by: disposeBag)
+        interactor.loadGoals()
     }
 
     @IBAction private func addButtonTapped(_ sender: UIButton) {
-        let addGoalViewController = AddGoalViewController.instantiate()
-        addGoalViewController.modalPresentationStyle = .custom
-        addGoalViewController.transitioningDelegate = self
-        present(addGoalViewController, animated: true)
+        router.routeToAddGoal()
     }
+}
 
-    @objc private func pullToRefresh(_ refreshControl: UIRefreshControl) {
-        viewModel.input.pullToRefresh()
+extension MyGoalsViewController: MyGoalsView {
+    func displayGoals(_ goals: [GoalDisplayable]) {
+        items = goals
+        adapter.performUpdates(animated: true)
     }
 }
 
@@ -129,21 +103,16 @@ extension MyGoalsViewController: ListAdapterDataSource {
 
 extension MyGoalsViewController: MyGoalsSectionControllerDelegate {
     func didSelectGoal(_ goal: Goal) {
-
-        let vc1 = UINavigationController(rootViewController: GoalOverviewViewController.instantiate(with: goal))
-        vc1.tabBarItem = UITabBarItem(title: "Overview", image: Image.overviewIcon, selectedImage: Image.overviewSelectedIcon)
-        let vc2 = UINavigationController(rootViewController: PaymentsViewController.instantiate(with: goal))
-        vc2.tabBarItem = UITabBarItem(title: "Payments", image: Image.creditCardIcon, tag: 1)
-
-        let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([vc1, vc2], animated: false)
-
-        present(tabBarController, animated: true)
+        router.routeToSelectedGoal(goal)
     }
 }
 
 extension MyGoalsViewController: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(
+        forPresented presented: UIViewController,
+        presenting: UIViewController,
+        source: UIViewController
+        ) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.startingPoint = addButton.center
         transition.circleColor = addButton.backgroundColor!
