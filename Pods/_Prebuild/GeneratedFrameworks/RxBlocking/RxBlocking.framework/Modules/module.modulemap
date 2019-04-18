@@ -1,0 +1,11 @@
+framework module RxBlocking {
+  umbrella header "RxBlocking-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RxBlocking.Swift {
+    header "RxBlocking-Swift.h"
+    requires objc
+}

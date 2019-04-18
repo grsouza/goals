@@ -1,0 +1,11 @@
+framework module RxTest {
+  umbrella header "RxTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RxTest.Swift {
+    header "RxTest-Swift.h"
+    requires objc
+}

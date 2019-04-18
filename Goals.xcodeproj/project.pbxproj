@@ -380,7 +380,6 @@
 				18026EC31FF2B5D700C9C267 /* Frameworks */,
 				18026EC41FF2B5D700C9C267 /* Resources */,
 				EE63A6FC7B5D1F60EB2E4424 /* [CP] Embed Pods Frameworks */,
-				0252BE05660387E15E6C47D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,7 +399,6 @@
 				18026ED71FF2B5D700C9C267 /* Frameworks */,
 				18026ED81FF2B5D700C9C267 /* Resources */,
 				00879E9A63B4374960C1F076 /* [CP] Embed Pods Frameworks */,
-				7C9D8A2789214CA13ABB6CC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -483,33 +481,30 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GoalsTests/Pods-GoalsTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-GoalsTests/Pods-GoalsTests-frameworks.sh",
+				"${PODS_ROOT}/RxAtomic/RxAtomic.framework",
+				"${PODS_ROOT}/RxAtomic/RxAtomic.framework.dSYM",
+				"${PODS_ROOT}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/RxSwift/RxSwift.framework.dSYM",
+				"${PODS_ROOT}/RxBlocking/RxBlocking.framework",
+				"${PODS_ROOT}/RxBlocking/RxBlocking.framework.dSYM",
+				"${PODS_ROOT}/RxTest/RxTest.framework",
+				"${PODS_ROOT}/RxTest/RxTest.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxAtomic.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxSwift.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxBlocking.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxTest.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoalsTests/Pods-GoalsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0252BE05660387E15E6C47D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Goals/Pods-Goals-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoalsTests/Pods-GoalsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0F666B3033D5DE062D6B67F0 /* [CP] Check Pods Manifest.lock */ = {
@@ -548,47 +543,48 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C9D8A2789214CA13ABB6CC0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoalsTests/Pods-GoalsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EE63A6FC7B5D1F60EB2E4424 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Goals/Pods-Goals-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Goals/Pods-Goals-frameworks.sh",
+				"${PODS_ROOT}/IGListKit/IGListKit.framework",
+				"${PODS_ROOT}/IGListKit/IGListKit.framework.dSYM",
+				"${PODS_ROOT}/Realm/Realm.framework",
+				"${PODS_ROOT}/Realm/Realm.framework.dSYM",
+				"${PODS_ROOT}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/RealmSwift/RealmSwift.framework.dSYM",
+				"${PODS_ROOT}/RxAtomic/RxAtomic.framework",
+				"${PODS_ROOT}/RxAtomic/RxAtomic.framework.dSYM",
+				"${PODS_ROOT}/RxCocoa/RxCocoa.framework",
+				"${PODS_ROOT}/RxCocoa/RxCocoa.framework.dSYM",
+				"${PODS_ROOT}/RxRealm/RxRealm.framework",
+				"${PODS_ROOT}/RxRealm/RxRealm.framework.dSYM",
+				"${PODS_ROOT}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/RxSwift/RxSwift.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/IGListKit.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Realm.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RealmSwift.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxAtomic.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxCocoa.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxRealm.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/RxSwift.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Goals/Pods-Goals-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Goals/Pods-Goals-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -799,7 +795,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.Goals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -815,7 +811,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.Goals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -832,7 +828,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.GoalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Goals.app/Goals";
 			};
@@ -850,7 +846,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grsouza.GoalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Goals.app/Goals";
 			};

@@ -105,7 +105,7 @@ final class ProgressView: UIView {
         animation.duration = 0.3
         animation.isRemovedOnCompletion = false
         animation.isAdditive = true
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         progressLayer.add(animation, forKey: "strokeEnd")
     }
 

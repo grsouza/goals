@@ -1,10 +1,7 @@
-ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift" "${PODS_CONFIGURATION_BUILD_DIR}/RxTest" "${PODS_CONFIGURATION_BUILD_DIR}/IGListKit" "${PODS_CONFIGURATION_BUILD_DIR}/Realm" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift" "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa" "${PODS_CONFIGURATION_BUILD_DIR}/RxRealm" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks" "${PODS_ROOT}/IGListKit" "${PODS_ROOT}/Realm" "${PODS_ROOT}/RealmSwift" "${PODS_ROOT}/RxAtomic" "${PODS_ROOT}/RxBlocking" "${PODS_ROOT}/RxCocoa" "${PODS_ROOT}/RxRealm" "${PODS_ROOT}/RxSwift" "${PODS_ROOT}/RxTest"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxTest/RxTest.framework/Headers" $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/IGListKit/IGListKit.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Realm/Realm.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift/RealmSwift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxRealm/RxRealm.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "RxSwift" -framework "RxTest"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"z" -framework "Foundation" -framework "IGListKit" -framework "Realm" -framework "RealmSwift" -framework "RxAtomic" -framework "RxBlocking" -framework "RxCocoa" -framework "RxRealm" -framework "RxSwift" -framework "RxTest" -framework "Security" -framework "UIKit" -framework "XCTest"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

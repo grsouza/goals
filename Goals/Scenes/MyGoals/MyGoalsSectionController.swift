@@ -37,7 +37,7 @@ final class MyGoalsSectionController: ListSectionController {
     }
 
     override func didUpdate(to object: Any) {
-        item = object as! GoalDisplayable
+        item = object as? GoalDisplayable
     }
 
     override func didSelectItem(at index: Int) {

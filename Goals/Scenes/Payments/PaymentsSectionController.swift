@@ -36,7 +36,7 @@ final class PaymentsSectionController: ListSectionController {
     }
 
     override func didUpdate(to object: Any) {
-        item = object as! PaymentDisplayable
+        item = object as? PaymentDisplayable
     }
 
     override func didSelectItem(at index: Int) {
