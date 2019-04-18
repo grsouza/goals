@@ -11,7 +11,7 @@ import RealmSwift
 
 final class RMPayment: Object {
     @objc dynamic var uid: String = ""
-    @objc dynamic var date: Date = Date()
+    @objc dynamic var date = Date()
     @objc dynamic var amount: Double = 0.0
     @objc dynamic var goalUID: String = ""
 

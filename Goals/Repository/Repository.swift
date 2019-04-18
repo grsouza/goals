@@ -9,8 +9,8 @@
 import Foundation
 import Realm
 import RealmSwift
-import RxSwift
 import RxRealm
+import RxSwift
 
 private func abstractMethod() -> Never {
     fatalError("abstract method")
@@ -71,7 +71,7 @@ final class Repository<T: RealmRepresentable>: AbstractRespository<T> where T ==
             let objects = self.realm.objects(T.RealmType.self)
             return Observable.array(from: objects)
                 .mapToDomain()
-            }
+        }
             .subscribeOn(scheduler)
     }
 
@@ -79,7 +79,7 @@ final class Repository<T: RealmRepresentable>: AbstractRespository<T> where T ==
         return Observable.deferred {
             let object = self.realm.object(ofType: T.RealmType.self, forPrimaryKey: id)?.asDomain()
             return Observable.from(optional: object)
-            }
+        }
             .subscribeOn(scheduler)
     }
 
@@ -91,7 +91,7 @@ final class Repository<T: RealmRepresentable>: AbstractRespository<T> where T ==
 
             return Observable.array(from: objects)
                 .mapToDomain()
-            }
+        }
             .subscribeOn(scheduler)
     }
 
@@ -111,7 +111,7 @@ final class Repository<T: RealmRepresentable>: AbstractRespository<T> where T ==
                 return Observable.error(RepositoryError.notFound)
             }
             return self.realm.rx.delete(object)
-            }
+        }
             .subscribeOn(scheduler)
     }
 

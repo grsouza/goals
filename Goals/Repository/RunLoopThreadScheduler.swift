@@ -58,9 +58,9 @@ private final class ThreadTarget: NSObject {
 }
 
 private final class Action: NSObject {
-    private let action: () -> ()
+    private let action: () -> Void
 
-    init(action: @escaping () -> ()) {
+    init(action: @escaping () -> Void) {
         self.action = action
     }
 

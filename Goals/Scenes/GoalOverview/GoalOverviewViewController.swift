@@ -6,8 +6,8 @@
 //  Copyright © 2017 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
 import RxSwift
+import UIKit
 
 final class GoalOverviewViewController: UIViewController {
 

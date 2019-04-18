@@ -16,7 +16,7 @@ final class MockGoalService: GoalCreatable, GoalLoadable {
 
     private let goals: [Goal] = [
         Goal(uid: "12345", title: "Buy an iPhone X", amount: 1000, payments: []),
-        Goal(uid: "124", title: "Buy a House", amount: 10342900, payments: []),
+        Goal(uid: "124", title: "Buy a House", amount: 10_342_900, payments: [])
     ]
 
     func create(with title: String, amount: Double) -> Observable<Goal> {

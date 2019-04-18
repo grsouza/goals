@@ -6,8 +6,8 @@
 //  Copyright © 2018 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
 import IGListKit
+import UIKit
 
 class ListViewController<Item: ListDiffable>: UIViewController, UIScrollViewDelegate, ListAdapterDataSource {
 
@@ -31,7 +31,6 @@ class ListViewController<Item: ListDiffable>: UIViewController, UIScrollViewDele
     }
 
     override func loadView() {
-        super.loadView()
         view = collectionView
     }
 

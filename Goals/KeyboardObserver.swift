@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol KeyboardObservable: class {
+protocol KeyboardObservable: AnyObject {
     func keyboardWillShow(with rect: CGRect)
     func keyboardWillHide(with rect: CGRect)
 }
@@ -33,8 +33,8 @@ final class KeyboardObserver {
             name: UIResponder.keyboardWillHideNotification, object: nil
         )
     }
-
-    func stop() {
+    
+    deinit {
         NotificationCenter.default.removeObserver(self)
     }
 

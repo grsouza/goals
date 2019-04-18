@@ -9,7 +9,7 @@
 import Foundation
 import IGListKit
 
-protocol PaymentsSectionControllerDelegate: class {
+protocol PaymentsSectionControllerDelegate: AnyObject {
     func didSelect(_ payment: Payment)
 }
 

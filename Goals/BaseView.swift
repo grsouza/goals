@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol BaseView: class {
+protocol BaseView: AnyObject {
     func displayError(_ error: Error)
 }
 

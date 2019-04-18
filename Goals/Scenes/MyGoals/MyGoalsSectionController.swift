@@ -9,7 +9,7 @@
 import Foundation
 import IGListKit
 
-protocol MyGoalsSectionControllerDelegate: class {
+protocol MyGoalsSectionControllerDelegate: AnyObject {
     func didSelectGoal(_ goal: Goal)
 }
 

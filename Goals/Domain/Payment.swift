@@ -16,11 +16,4 @@ struct Payment {
     let goalUID: String
 }
 
-extension Payment: Equatable {
-    static func ==(lhs: Payment, rhs: Payment) -> Bool {
-        return lhs.uid == rhs.uid &&
-            lhs.date == rhs.date &&
-            lhs.amount == rhs.amount &&
-            lhs.goalUID == rhs.goalUID
-    }
-}
+extension Payment: Equatable {}

@@ -6,9 +6,9 @@
 //  Copyright (c) 2017 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 protocol AddGoalViewModelInput {
     func confirmTapped()

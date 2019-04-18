@@ -59,7 +59,7 @@ extension CircularTransition: UIViewControllerAnimatedTransitioning {
                     presentedView.transform = CGAffineTransform.identity
                     presentedView.alpha = 1
                     presentedView.center = viewCenter
-                }, completion: { (success) in
+                }, completion: { success in
                     transitionContext.completeTransition(success)
                 })
             }
@@ -85,7 +85,7 @@ extension CircularTransition: UIViewControllerAnimatedTransitioning {
                         containerView.insertSubview(returningView, belowSubview: returningView)
                         containerView.insertSubview(self.circle, belowSubview: returningView)
                     }
-                }, completion: { (success) in
+                }, completion: { success in
                     returningView.center = viewCenter
                     returningView.removeFromSuperview()
                     self.circle.removeFromSuperview()
@@ -98,7 +98,7 @@ extension CircularTransition: UIViewControllerAnimatedTransitioning {
     func frameForCircle(withCenter center: CGPoint, size: CGSize, startPoint: CGPoint) -> CGRect {
         let xLength = fmax(startPoint.x, size.width - startPoint.x)
         let yLength = fmax(startPoint.y, size.height - startPoint.y)
-        let offset = sqrt(xLength*xLength + yLength*yLength) * 2
+        let offset = sqrt(xLength * xLength + yLength * yLength) * 2
         let size = CGSize(width: offset, height: offset)
         return CGRect(origin: .zero, size: size)
     }

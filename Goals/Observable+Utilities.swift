@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
 extension ObservableType where E == Bool {
     /// Boolean not operator
-    public func not() -> Observable<Bool> {
+    func not() -> Observable<Bool> {
         return self.map(!)
     }
 
@@ -33,7 +33,7 @@ extension ObservableType {
     }
 
     func asDriverOnErrorJustComplete() -> Driver<E> {
-        return asDriver { error in
+        return asDriver { _ in
             return Driver.empty()
         }
     }

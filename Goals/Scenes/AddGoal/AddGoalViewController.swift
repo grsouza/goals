@@ -6,8 +6,8 @@
 //  Copyright © 2017 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
 import RxSwift
+import UIKit
 
 final class AddGoalViewController: UIViewController {
 
@@ -40,11 +40,6 @@ final class AddGoalViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         keyboardObserver.start()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        keyboardObserver.stop()
     }
 
     private func bindViewModel() {

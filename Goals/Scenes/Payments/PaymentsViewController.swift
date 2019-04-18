@@ -6,9 +6,9 @@
 //  Copyright © 2017 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
-import RxSwift
 import IGListKit
+import RxSwift
+import UIKit
 
 final class PaymentDisplayable: ListDiffable {
     let uid: String

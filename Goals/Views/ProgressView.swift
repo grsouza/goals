@@ -41,13 +41,13 @@ final class ProgressView: UIView {
         NSLayoutConstraint.activate([
             progressLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             progressLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ])
+        ])
     }
 
     private func setupCircularLayer() {
         let startAngle: CGFloat = 0
         let endAngle = CGFloat(Double.pi * 2)
-        let centerPoint = CGPoint(x: frame.width/2, y: frame.height/2)
+        let centerPoint = CGPoint(x: frame.width / 2, y: frame.height / 2)
 
         circularLayer.path = UIBezierPath(
             arcCenter: centerPoint,
@@ -69,7 +69,7 @@ final class ProgressView: UIView {
     private func setupProgressLayer() {
         let startAngle = CGFloat(-Double.pi / 2)
         let endAngle = CGFloat(Double.pi * 2) + startAngle
-        let centerPoint = CGPoint(x: frame.width/2, y: frame.height/2)
+        let centerPoint = CGPoint(x: frame.width / 2, y: frame.height / 2)
 
         progressLayer.path = UIBezierPath(
             arcCenter: centerPoint,

@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol MyGoalsBusinessLogic: class {
+protocol MyGoalsBusinessLogic: AnyObject {
     func loadGoals()
 }
 

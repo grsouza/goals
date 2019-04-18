@@ -6,8 +6,8 @@
 //  Copyright © 2017 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
 import IGListKit
+import UIKit
 
 final class GoalDisplayable: ListDiffable {
     let uid: String
@@ -125,4 +125,3 @@ extension MyGoalsViewController: UIViewControllerTransitioningDelegate {
         return transition
     }
 }
-

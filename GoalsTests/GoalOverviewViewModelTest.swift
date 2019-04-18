@@ -6,10 +6,10 @@
 //  Copyright © 2018 Guilherme Souza. All rights reserved.
 //
 
-import XCTest
-import RxTest
-import RxSwift
 import RxCocoa
+import RxSwift
+import RxTest
+import XCTest
 
 @testable import Goals
 

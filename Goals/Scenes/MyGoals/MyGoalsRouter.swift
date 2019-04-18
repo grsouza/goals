@@ -8,11 +8,10 @@
 
 import UIKit
 
-protocol MyGoalsRoutingLogic: class {
+protocol MyGoalsRoutingLogic: AnyObject {
     func routeToAddGoal()
     func routeToSelectedGoal(_ goal: Goal)
 }
-
 
 final class MyGoalsModule {
 

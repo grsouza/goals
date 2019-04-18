@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MyGoalsPresentationLogic: class {
+protocol MyGoalsPresentationLogic: AnyObject {
     func presentGoals(_ goals: [Goal])
     func presentError(_ error: Error)
 }

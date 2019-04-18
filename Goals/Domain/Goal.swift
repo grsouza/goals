@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Goal {
+struct Goal: Equatable {
     let uid: String
     let title: String
     let amount: Double
@@ -24,14 +24,5 @@ struct Goal {
 
     var isCompleted: Bool {
         return remaining == 0
-    }
-}
-
-extension Goal: Equatable {
-    static func ==(lhs: Goal, rhs: Goal) -> Bool {
-        return lhs.uid == rhs.uid &&
-            lhs.title == rhs.title &&
-            lhs.amount == rhs.amount &&
-            lhs.isCompleted == rhs.isCompleted
     }
 }

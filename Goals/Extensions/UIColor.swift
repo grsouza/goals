@@ -29,6 +29,6 @@ extension UIColor {
     ///   - a: alpha value, defaults to 1
     /// - Returns: The created UIColor
     static func rgba(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat = 1) -> UIColor {
-        return UIColor(red: r/255, green: g/255, blue: b/255, alpha: a)
+        return UIColor(red: r / 255, green: g / 255, blue: b / 255, alpha: a)
     }
 }

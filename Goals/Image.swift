@@ -9,8 +9,8 @@
 import UIKit
 
 enum Image {
-    static let overviewIcon = UIImage(named: "ic_target")
-    static let overviewSelectedIcon = UIImage(named: "ic_target_fill")
-    static let creditCardIcon = UIImage(named: "ic_credit-card")
-    static let closeIcon = UIImage(named: "ic_close")
+    static let overviewIcon = UIImage(imageLiteralResourceName: "ic_target")
+    static let overviewSelectedIcon = UIImage(imageLiteralResourceName: "ic_target_fill")
+    static let creditCardIcon = UIImage(imageLiteralResourceName: "ic_credit-card")
+    static let closeIcon = UIImage(imageLiteralResourceName: "ic_close")
 }

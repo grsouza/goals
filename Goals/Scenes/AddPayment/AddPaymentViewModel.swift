@@ -6,9 +6,9 @@
 //  Copyright (c) 2017 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 protocol AddPaymentViewModelInput {
     func confirmTapped()
@@ -50,7 +50,7 @@ final class AddPaymentViewModel: AddPaymentViewModelType, AddPaymentViewModelInp
                 } else {
                     return "invalid amount"
                 }
-        }
+            }
 
         isConfirmButtonEnabled = remainingValue.map { $0 >= 0 }
 

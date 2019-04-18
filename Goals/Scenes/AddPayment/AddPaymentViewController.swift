@@ -6,10 +6,10 @@
 //  Copyright © 2017 Guilherme Souza. All rights reserved.
 //
 
-import UIKit
 import RxSwift
+import UIKit
 
-protocol AddPaymentViewControllerDelegate: class {
+protocol AddPaymentViewControllerDelegate: AnyObject {
     func willDismissAddPaymentViewController()
 }
 
@@ -46,11 +46,6 @@ final class AddPaymentViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         keyboardObserver.start()
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        keyboardObserver.stop()
     }
 
     private func bindViewModel() {

@@ -55,4 +55,3 @@ final class GoalCell: UICollectionViewCell {
         contentView.alpha = 1.0
     }
 }
-
